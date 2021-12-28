@@ -4,12 +4,10 @@ class Solution {
         for(int i =0; i<arr.length;i++){
             if(arr[i] == '?'){
                 for(int j =0;j<3;j++){
-                    if(i>0&&arr[i-1] == 'a'+j){
+                    if(i>0&&arr[i-1] == 'a'+j || i<arr.length-1&&arr[i+1] == 'a'+j){
                      continue;    
                     }
-                    else if(i<arr.length-1&&arr[i+1] == 'a'+j){
-                     continue;    
-                    }else{
+                    else{
                         arr[i] = (char)('a'+j);
                         break;
                     }
